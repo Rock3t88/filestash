@@ -27,7 +27,7 @@ RUN apt-get update > /dev/null && \
 
 # STEP4: Create the prod image from the build
 FROM debian:stable-slim
-MAINTAINER mickael@kerjean.me
+MAINTAINER mail@rock3t.de
 COPY --from=builder_backend /home/dist/ /app/
 WORKDIR "/app"
 RUN apt-get update > /dev/null && \
